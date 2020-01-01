@@ -1,5 +1,7 @@
 package de.fheuschen.dns.runners;
 
+import de.fheuschen.dns.DNSHelper;
+import de.fheuschen.dns.DNSTester;
 import de.fheuschen.dns.annotation.Runner;
 import org.apache.commons.cli.CommandLine;
 
@@ -12,7 +14,11 @@ public class TestRunner implements de.fheuschen.dns.Runner {
 
     @Override
     public boolean run() {
-        return false;
+
+        boolean o = DNSHelper.c(DNSTester.getTestServer(), DNSTester.getRandomResolver(), "fheuschen.de", true);
+
+
+        return true;
     }
 
     @Override

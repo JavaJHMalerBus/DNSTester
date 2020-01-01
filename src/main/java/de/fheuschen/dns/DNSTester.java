@@ -5,16 +5,20 @@ import org.reflections.Reflections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 public class DNSTester {
 
     static boolean debug = false;
     private static CommandLine cl;
-    public static String server;
+    public static String server = "1.1.1.1";
     public static String[] resolvers = {"8.8.8.8", "8.8.4.4"};
 
     public static void main(String[] args) throws ParseException {
+        System.err.close();
+        System.setErr(System.out);
+
         Options o = new Options();
 
         o.addOption("d", "debug", false, "Print debug information");
@@ -23,15 +27,37 @@ public class DNSTester {
         serv.setRequired(true);
 
         o.addOption(serv);
+        o.addOption("r", "resolvers", true, "Resolvers to test against");
 
         CommandLineParser clp = new DefaultParser();
         cl = clp.parse(o, args);
 
         debug = cl.hasOption("d");
 
+        if(cl.hasOption("r")) {
+            resolvers = cl.getOptionValues("r");
+        }
+
+        if(cl.hasOption("s"))
+        {
+            server = cl.getOptionValue("s");
+        }
+
         O.p("Starting up...");
 
         startup();
+    }
+
+    public static String getTestServer() {
+        return server;
+    }
+
+    public static String getRandomResolver() {
+        if(resolvers.length == 0) {
+            O.e("No resolvers configured! Exiting...");
+            System.exit(1);
+        }
+        return resolvers[new Random().nextInt(resolvers.length - 1)];
     }
 
     private static void startup() {
@@ -55,7 +81,7 @@ public class DNSTester {
 
         }
 
-        O.p("Shuting down...");
+        O.p("Shutting down...");
         O.p("Good bye!");
     }
 

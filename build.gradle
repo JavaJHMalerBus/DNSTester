@@ -17,5 +17,6 @@ dependencies {
     compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
     // https://mvnrepository.com/artifact/org.reflections/reflections
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
-    compile "org.minidns:minidns-hla:+"
+    // https://mvnrepository.com/artifact/dnsjava/dnsjava
+    compile group: 'dnsjava', name: 'dnsjava', version: '2.1.9'
 }
