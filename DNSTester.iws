@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c8fbf9-c206-4eb1-88ee-109bd6535e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/DNSHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/runners/MediaRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNSTester.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/DNSTester.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DNSTester.iws" beforeDir="false" afterPath="$PROJECT_DIR$/DNSTester.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNSTester.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DNSTester.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNSTester.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DNSTester.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/de/fheuschen/dns/DNSTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/de/fheuschen/dns/DNSTester.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/de/fheuschen/dns/runners/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/de/fheuschen/dns/runners/TestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/DNSHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/DNSHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/DNSTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/DNSTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/runners/AdRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/runners/AdRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fheuschen/dns/runners/TestRunner.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577894834180</updated>
-      <workItem from="1577894838462" duration="8595000" />
+      <workItem from="1577894838462" duration="11035000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1577899258290</created>
@@ -114,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577899258290</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Switched DNS Client">
+      <created>1577905824554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577905824554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Switched DNS Client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched DNS Client" />
   </component>
 </project>

@@ -8,6 +8,10 @@ import java.util.Set;
 public class DNSHelper {
 
     public static Record[] resolve(String server, String domain, int t) throws IOException {
+
+        Lookup.getDefaultCache(DClass.IN).setMaxCache(0);
+        Lookup.getDefaultCache(DClass.IN).setMaxNCache(0);
+
         Lookup l = new Lookup(domain, t, DClass.IN);
         l.setResolver(new SimpleResolver(server));
         l.run();
@@ -26,7 +30,7 @@ public class DNSHelper {
         Object[] res = new Object[3];
         res[0] = join(resA);
         res[1] = join(resB);
-        res[2] = res[0].toString().equalsIgnoreCase(res[1].toString());
+        res[2] = ((resA.length > 0 && resB.length > 0) ? resA[0].sameRRset(resB[0]) : false);
 
         return res;
     }
@@ -53,22 +57,27 @@ public class DNSHelper {
                 O.p(
                   "[R] - Result from " + server + ":" + ws(l1) + o[0],
                   "[R] - Result from " + server2 + ":" + ws(l2) + o[1],
-                  "[S] - Test succeeded"
+                  "[S] - Test succeeded\n"
                 );
                 return true;
             } else {
                 O.p(
                         "[R] - Result from " + server + ":" + ws(l1) + o[0],
                         "[R] - Result from " + server2 + ":" + ws(l2) + o[1],
-                        "[F] - Test failed"
+                        "[F] - Test failed\n"
                 );
                 return false;
             }
+
 
         } catch (IOException e) {
             O.d(e.getLocalizedMessage());
             return false;
         }
+    }
+
+    public static boolean c(String domain, boolean desired) {
+        return c(DNSTester.getTestServer(), DNSTester.getRandomResolver(), domain, desired);
     }
 
     public static String join(Object[] a)

@@ -23,6 +23,6 @@ public class TestRunner implements de.fheuschen.dns.Runner {
 
     @Override
     public boolean isResponsible(CommandLine cl) {
-        return true;
+        return false;
     }
 }

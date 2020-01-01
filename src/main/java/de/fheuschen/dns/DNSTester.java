@@ -68,7 +68,7 @@ public class DNSTester {
         O.p("Executing runners...");
         for(Runner ru : r) {
 
-            O.p("--- Runner: " + ru.getClass().getCanonicalName() + " (" + ru.getDescription() + ") ---\n\n\n");
+            O.p("--- Runner: " + ru.getClass().getCanonicalName() + " (" + ru.getDescription() + ") ---");
 
             if(!ru.run()) {
 
@@ -77,7 +77,7 @@ public class DNSTester {
                 break;
             }
 
-            O.p("--> " + ru.getClass().getCanonicalName() + " succeeded! Continuing...");
+            O.p("--> " + ru.getClass().getCanonicalName() + " succeeded! Continuing...\n\n\n\n\n\n");
 
         }
 
