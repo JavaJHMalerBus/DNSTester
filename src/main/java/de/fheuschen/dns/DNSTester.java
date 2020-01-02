@@ -1,8 +1,10 @@
 package de.fheuschen.dns;
 
 import org.apache.commons.cli.*;
+import org.fusesource.jansi.AnsiConsole;
 import org.reflections.Reflections;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -14,8 +16,15 @@ public class DNSTester {
     private static CommandLine cl;
     public static String server = "1.1.1.1";
     public static String[] resolvers = {"8.8.8.8", "8.8.4.4"};
+    public static Console c;
+
+
+    static {
+
+    }
 
     public static void main(String[] args) throws ParseException {
+        AnsiConsole.systemInstall();
         System.err.close();
         System.setErr(System.out);
 
@@ -57,7 +66,7 @@ public class DNSTester {
             O.e("No resolvers configured! Exiting...");
             System.exit(1);
         }
-        return resolvers[new Random().nextInt(resolvers.length - 1)];
+        return resolvers[Math.max(0, new Random().nextInt(resolvers.length) - 1)];
     }
 
     private static void startup() {

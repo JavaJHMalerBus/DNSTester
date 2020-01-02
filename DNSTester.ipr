@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactManager">
+    <artifact name="DNSTester:jar">
+      <output-path>$USER_HOME$/DNSTester</output-path>
+      <root id="root">
+        <element id="archive" name="DNSTester.jar">
+          <element id="module-output" name="DNSTester.main" />
+          <element id="module-output" name="de.fheuschen.dns.DNSTester.main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+        </element>
+        <element id="library" level="project" name="Gradle: com.google.guava:guava:20.0" />
+        <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+        <element id="library" level="project" name="Gradle: org.reflections:reflections:0.9.11" />
+        <element id="library" level="project" name="Gradle: org.javassist:javassist:3.21.0-GA" />
+        <element id="library" level="project" name="Gradle: org.fusesource.jansi:jansi:1.18" />
+        <element id="library" level="project" name="Gradle: dnsjava:dnsjava:2.1.9" />
+        <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+        <element id="library" level="project" name="Gradle: commons-cli:commons-cli:1.4" />
+      </root>
+    </artifact>
+  </component>
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="de.fheuschen.dns.DNSTester.main" target="1.8" />
+      <module name="de.fheuschen.dns.DNSTester.test" target="1.8" />
       <module name="DNSTester.main" target="1.8" />
       <module name="DNSTester.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -37,6 +60,8 @@
       <module fileurl="file://$PROJECT_DIR$/DNSTester.iml" filepath="$PROJECT_DIR$/DNSTester.iml" />
       <module fileurl="file://$PROJECT_DIR$/DNSTester.main.iml" filepath="$PROJECT_DIR$/DNSTester.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/DNSTester.test.iml" filepath="$PROJECT_DIR$/DNSTester.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/de.fheuschen.dns.DNSTester.main.iml" filepath="$PROJECT_DIR$/de.fheuschen.dns.DNSTester.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/de.fheuschen.dns.DNSTester.test.iml" filepath="$PROJECT_DIR$/de.fheuschen.dns.DNSTester.test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_12" project-jdk-name="12" project-jdk-type="JavaSDK">
@@ -82,6 +107,15 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.fusesource.jansi:jansi:1.18">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.18/d9205bbcd4b5f9cd1effe752d18f73bd942d783f/jansi-1.18.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.18/9553a21528688c4a0b1248036dbd878c16afe47d/jansi-1.18-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.hamcrest:hamcrest-core:1.3">

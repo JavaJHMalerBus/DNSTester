@@ -1,5 +1,21 @@
 plugins {
+
     id 'java'
+
+}
+
+jar {
+
+    manifest {
+
+        attributes(
+
+                'Main-Class': 'de.fheuschen.dns.DNSTester'
+
+        )
+
+    }
+
 }
 
 group 'de.fheuschen.dns'
@@ -19,4 +35,7 @@ dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
     // https://mvnrepository.com/artifact/dnsjava/dnsjava
     compile group: 'dnsjava', name: 'dnsjava', version: '2.1.9'
+    // https://mvnrepository.com/artifact/org.fusesource.jansi/jansi
+    compile group: 'org.fusesource.jansi', name: 'jansi', version: '1.18'
+
 }

@@ -27,4 +27,9 @@ public class MediaRunner implements Runner {
     public boolean isResponsible(CommandLine cl) {
         return true;
     }
+
+    @Override
+    public String getDescription() {
+        return "Checks if news sites are being blocked.";
+    }
 }
